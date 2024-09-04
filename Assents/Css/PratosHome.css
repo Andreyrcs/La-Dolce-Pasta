@@ -1,0 +1,32 @@
+
+.prds .container{
+    margin-top: -20%;
+
+}
+.prds .grid{
+    background-color:aqua;
+    margin: 0 2rem;
+    border-radius: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    box-shadow: 0 3px 5px var(--primary-light);
+    position: relative;
+    width: 25%;
+    height: 30rem;
+}
+.prds .prd{
+    text-align: center;
+    border-right: 0;
+    border-bottom: 1px solid var(--primary-light);
+    color:var(--primary);
+    padding: 5rem 2rem;
+}
+.prds .prd:last-child{
+    border-right: 0;
+    border-bottom: 0;
+}
+.linha_comercial{
+    display: flex;
+    justify-content:space-around;
+    flex-direction: column;
+}
