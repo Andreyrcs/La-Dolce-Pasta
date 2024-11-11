@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="py-br" >
+<head>
+  <meta charset="UTF-8">
+  <title>Pagina do produto</title>
+  <link rel="stylesheet" href="./Assents/Css/loading.css">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'>
+  <link rel="stylesheet" href="Assents/Css/ProdutosIndex.css">
+  <link rel="stylesheet" href="./Assents/Css/navbar.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+<body onload="preCarregamento();">
+    <div class="pre-carregamento">
+        <video class="loadingE" src="./Assents/img/espaguete.mp4" muted loop autoplay></video>
+    </div>
+
+
+    <nav class="nav" id="nav" >
+        <i class="uil uil-bars navOpenBtn"></i>
+        <img src="Assents/img/Group 2.png" style="width: 150px;" alt="" class="logo">
+
+        <ul class="nav-links">
+            <i class="uil uil-times navCloseBtn"></i>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="Cardapio.html">Cardapio</a></li>
+            <li><a onclick="window.location.href='index.html#informação'">Informações</a></li>
+            <li><a onclick="window.location.href='index.html#Sobre-nos'">Sobre nós</a></li>
+            <li><a href="Cadastro.html">Cadastar-se</a></li>
+            <li><a href="Carrinho.html">Carrinho</a></li>
+          </ul>
+  
+        <i class="uil uil-search search-icon" id="searchIcon"></i>
+        <div class="search-box">
+          <i class="uil uil-search search-icon"></i>
+          <input type="text" placeholder="Search here..." />
+        </div>
+      </nav>
+
+      <div class="conteudo">
+    <div class="productPage">
+        </div>
+        <div class="productPage__content">
+            <div class="productPage__contentTop">
+                <div>
+                    <div class="prev">←</div>
+                    <div class="next">→</div>
+                </div>
+                <div class="productPage__title--mobile">La Dolce Pasta</div>
+                <div class="productPage__featuredImage">
+                    <div class="product-image-slider">
+                        <div><img src="Assents/img/como-fazer-macarrao-receita-basica-2o.jpeg"></div>
+                        <div><img src="Assents/img/SPAGHETTI-MOLHO-DE-TOMATE-02ç.jpg"></div>
+                        <div><img src="Assents/img/como-fazer-penne-ao-molho-branco.jpg"></div>
+                        <div><img src=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ingredients">
+                <figure class="ingredients_item">
+                    <img src="Assents/img/Captura de tela 2024-10-21 145906.png" alt="item1"/>
+                    <figcaption>Macarrão</figcaption>
+                </figure>
+                <figure class="ingredients_item">
+                    <img src="Assents/img/mussarela.png" alt="item2"/>
+                    <figcaption>Queijo</figcaption>
+                </figure>
+                <figure class="ingredients_item">
+                    <img src="Assents/img/Carne.jpg" alt="item3"/>
+                    <figcaption>Carne</figcaption>
+                </figure>
+                <figure class="ingredients_item">
+                    <img src="Assents/img/manjericão.png" alt="item4"/>
+                    <figcaption>manjericão</figcaption>
+                </figure>
+                <figure class="ingredients_item">
+                    <img src="Assents/img/tomatoes.jpg" alt="item5"/>
+                    <figcaption>Tomates</figcaption>
+                </figure>
+            </div>
+            <div class="productPage__contentBottom">
+                <div class="productPage__desciption">
+
+                    <div class="productPage__title">MACARRÃO TRADICIONAL</div>
+                    <div class="productPage__subtitle">Um prato tradiconal e facil, mas que tem o melhor sabor</div>
+                    
+                    <div class="productPage__descriptionTxt">
+                        <p>Um prato clássico de macarrão é composto de macarrão al dente, generosamente coberto por uma suculenta mistura de carne moída refogada, molho de tomate caseiro e temperado com ervas aromáticas. </p>
+                         <p> O queijo derretido sobre o prato adiciona cremosidade, enquanto folhas frescas de manjericão dão um toque de cor vibrante e frescor ao prato.</p>
+                          <p>O molho de tomate, levemente adocicado e ácido, envolve cada fio de macarrão, proporcionando uma experiência rica e reconfortante. É um prato simples, mas delicioso, que exala os sabores autênticos da cozinha italiana.</p> 
+                    </div>
+                </div>
+
+                <div class="productPage__price">R$ 100,00</div>
+                <div class="linha-button4">
+                <button class="btn-4" data-tooltip="Size: 20Mb" id="buttoncar">
+                    <div class="button-wrapper">
+                      <div class="text">Adicionar ao carrinho</div>
+                      <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#7a3030" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                    </div>
+                </button>
+                </div>
+                </div>
+        
+        </div>
+
+
+    </div>
+
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+<script src='https://code.jquery.com/jquery-migrate-1.2.1.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script><script  src="Assents/Js/Produtosindex.js"></script>
+<script src="Assents/Js/navbar.js" defer></script>
+<script src="Assents/Js/Loading.js"></script>
+</body>
+</html>

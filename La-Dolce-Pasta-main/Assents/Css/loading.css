@@ -1,0 +1,23 @@
+
+
+div.pre-carregamento {
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    z-index: 9999; /* Garante que a tela de carregamento fique em cima de tudo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 300s; /* Transição suave para a opacidade */
+}
+div.pre-carregamento video{
+    width: 20rem;
+}
+
+.conteudo {
+    display: block; /* O conteúdo será exibido após o carregamento */
+}

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>La Dolce Pasta</title>
+    <link rel="stylesheet" href="./Assents/Css/loading.css">
+    <link rel="stylesheet" href="./Assents/Css/Home.css">
+    <link rel="stylesheet" href="./Assents/Css/navbar.css">
+    <link rel="stylesheet" href="./Assents/Css/Slider-inicial.css">
+    <link rel="stylesheet" href="./Assents/Css/PratosHome.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./Assents/Css/novidades.css">
+    <link rel="stylesheet" href="./Assents/Css/Informações.css">
+    <link rel="stylesheet" href="Assents/Css/Style-Sobre.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="Assents/Css/footer.css">
+    <link rel="shortcut icon" type="imagex/png" href="./Assents/img/logo.png">
+</head>
+<body onload="preCarregamento();">
+    <div class="pre-carregamento">
+        <video class="loadingE" src="./Assents/img/espaguete.mp4" muted loop autoplay></video>
+    </div>
+
+
+
+
+    <div class="conteudo">
+    
+    
+    
+    
+        <nav class="nav" id="nav" >
+        <i class="uil uil-bars navOpenBtn"></i>
+        <img src="Assents/img/Group 2.png" alt="" style="width: 150px;" class="logo">
+
+
+
+
+        <ul class="nav-links">
+          <i class="uil uil-times navCloseBtn"></i>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="Cardapio.html">Cardapio</a></li>
+          <li><a onclick="scrollToSection('informação')">Informações</a></li>
+          <li><a onclick="scrollToSection('Sobre-nos')">Sobre nós</a></li>
+          <li><a href="Cadastro.html">Cadastar-se</a></li>
+          <li><a href="Carrinho.html">Carrinho</a></li>
+        </ul>
+  
+        <i class="uil uil-search search-icon" id="searchIcon"></i>
+        <div class="search-box">
+          <i class="uil uil-search search-icon"></i>
+          <input type="text" placeholder="Search here..." />
+        </div>
+      </nav>
+    
+        <div class="whapperinicio">
+            <div class="imginicio">
+                <img src="Assents/img/Group 21.svg" alt="">
+            </div>
+
+            <div class="textincio">
+                <h1 class="red">O melhor Restaurante</h1>
+                <h1>Tradicional e 100% Italiano</h1>
+                <h1 class="red">Trazendo o Melhor</h1>
+                <h1>Sabor para os Clientes</h1>
+            </div>
+        </div>
+        <div class="buttonwhapper">
+            <button class="btn-1" onclick="scrollToSection('desc')">
+                <div class="original">Conhecer</div>
+                <div class="letters">
+                  <span>C</span>
+                  <span>O</span>
+                  <span>N</span>
+                  <span>H</span>
+                  <span>E</span>
+                  <span>C</span>
+                  <span>E</span>
+                  <span>R</span>
+                </div>
+              </button>
+        </div>
+<section class="testimonials">
+    <div class="slider">
+        <input checked id="slider-1" name="slider" type="radio" />
+        <input id="slider-2" name="slider" type="radio" />
+        <div class="slider-area">
+            <div class="slider-item">
+                <img src="./Assents/img/1920x1080-pasta-background-syrw3x313299axpa.jpg" alt="" />
+            </div>
+            <div class="slider-item">
+                <img src="Assents/img/Cheese_Pasta_Plate_571950_1920x1080.jpg" alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        
+        <section class="parte-comercial" id="desc">
+            <div class="linha-destaque"><h1 class="Destaque">Destaque</h1></div>
+            <div class="linha-comercial">
+                
+                <a href="Carrinho.html">
+                    <div class="card-img">
+                        <img src="Assents/img/65639f77ec92a3f54c6efe8fb6d50a8b.png" alt="">
+                        <div class="overlay">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                <path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+                            </svg>
+                            <p>Favoritos</p>
+                        </div>
+                    </div>
+                </a>
+
+                    
+                <a href="Produtos.html"><div class="card">
+                    <div class="container">
+                        <div class="card-li">
+                            <div class="img-container">
+                                <img src="Assents/img/teste.jpg" alt="image" />
+                            </div>
+                            <div class="actions">
+                                <a href="" class="favorite">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                        <path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <h3>Urban Vibes Tee</h3>
+                            <p>The Urban Vibes Tee captures the essence of modern city life with its sleek design and bold graphics.</p>
+                            <div class="linha-qty"><div class="qty-container">
+                                <button type="button" class="qty-count-minus">-</button>
+                                <input type="number" class="qty-count" min="0" max="10" value="1">
+                                <button type="button" class="qty-count-plus">+</button>
+                            </div></div></a>
+                            
+                            <div class="flip-container">
+                                <div class="flip-box">
+                                    <div class="flip-box-front">
+                                        <del>
+                                            <span class="price">$21.00</span>
+                                        </del>
+                                        <ins>
+                                            <span class="price">$19.00</span>
+                                        </ins>
+                                    </div>
+                                    <div class="flip-box-back"> <button><i class="fa-solid fa-cart-shopping"></i><p>Adicionar ao carrinho</p></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              
+                  <div class="card">
+                    <div class="container">
+                        <div class="card-li">
+                            <div class="img-container">
+                                <img src="Assents/img/teste.jpg" alt="image" />
+                            </div>
+                            <div class="actions">
+                                <a href="" class="favorite">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                        <path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <h3>Urban Vibes Tee</h3>
+                            <p>The Urban Vibes Tee captures the essence of modern city life with its sleek design and bold graphics.</p>
+                            <div class="linha-qty"><div class="qty-container">
+                                <button type="button" class="qty-count-minus">-</button>
+                                <input type="number" class="qty-count" min="0" max="10" value="1">
+                                <button type="button" class="qty-count-plus">+</button>
+                            </div></div>
+                            
+                            <div class="flip-container">
+                                <div class="flip-box">
+                                    <div class="flip-box-front">
+                                        <del>
+                                            <span class="price">$21.00</span>
+                                        </del>
+                                        <ins>
+                                            <span class="price">$19.00</span>
+                                        </ins>
+                                    </div>
+                                    <div class="flip-box-back"> <button><i class="fa-solid fa-cart-shopping"></i><p>Adicionar ao carrinho</p></button> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              
+                      <div class="card">
+                        <div class="container">
+                            <div class="card-li">
+                                <div class="img-container">
+                                    <img src="Assents/img/teste.jpg" alt="image" />
+                                </div>
+                                <div class="actions">
+                                    <a href="" class="favorite">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                            <path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <h3>Urban Vibes Tee</h3>
+                                <p>The Urban Vibes Tee captures the essence of modern city life with its sleek design and bold graphics.</p>
+                                <div class="linha-qty"><div class="qty-container">
+                                    <button type="button" class="qty-count-minus">-</button>
+                                    <input type="number" class="qty-count" min="0" max="10" value="1">
+                                    <button type="button" class="qty-count-plus">+</button>
+                                </div></div>
+                                
+                                <div class="flip-container">
+                                    <div class="flip-box">
+                                        <div class="flip-box-front">
+                                            <del>
+                                                <span class="price">$21.00</span>
+                                            </del>
+                                            <ins>
+                                                <span class="price">$19.00</span>
+                                            </ins>
+                                        </div>
+                                        <div class="flip-box-back"> <button><i class="fa-solid fa-cart-shopping"></i><p>Adicionar ao carrinho</p></button> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+         
+        </div>
+           
+        </section>         
+
+
+
+
+
+
+
+
+
+        
+        <div class="novidade ">
+            <div class="animate">
+                <div >
+            <p class="titulo-novidade">Novidade</p> 
+            <p class="subtitulo-novidade">Informe o seu email e receba novidades da la dolce pasta</h3>
+          </div>
+           <div class="linha-novidade">
+           <input type="name" name="Nome" placeholder="Digite seu nome">
+           <input type="email" name="email" placeholder="Digite seu email">
+        <button class="novidade-cadas">Cadastrar</button>
+    </div></div>
+</div>
+        <section class="informacoes " id="informação" >
+            
+            <div class="wapperinfo ">
+                <div class="linhainfo row">
+                    <img src="Assents/img/img3.jpeg" alt="">
+
+                    <div class="textinfo">
+                        <h1>Autenticidade na Tradição</h1>
+                        <p>Desfrute das melhores massas artesanais, feitas com ingredientes frescos e selecionados. Nossa dedicação em criar receitas autênticas garante sabores que remetem à verdadeira experiência culinária italiana. Perfeito para aqueles que buscam qualidade e excelência em cada prato.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wapperinfo">
+                <div class="linhainfo reverse">
+                    <img src="Assents/img/img2.jpeg" alt="">
+                    
+                    <div class="textinfo">
+                        <h1>Sabores Tradicionais</h1>
+                        <p>Hambúrgueres, massas e muito mais. Trabalhamos com ingredientes de primeira para garantir que cada prato ofereça não apenas sabor, mas também qualidade. Nossos chefs criam receitas que agradam tanto aos fãs de comida clássica quanto aos que buscam novas experiências gastronômicas.</p>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+            <div class="wapperinfo">
+                <div class="linhainfo row animate">
+                    <img src="Assents/img/img5.jpeg" alt="">
+
+                    <div class="textinfo">
+                        <h1>Experiência Única de Sabores</h1>
+                        <p>Aprecie pratos que trazem o melhor da culinária italiana diretamente para sua mesa. Da nossa famosa massa ao molho fresco, cada detalhe é pensado para proporcionar uma refeição inesquecível.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wapperinfo">
+                <div class="linhainfo reverse animate">
+                    <img src="Assents/img/img4.jpeg" alt="">
+                    
+                    <div class="textinfo">
+                        <h1>Inovações na Cozinha</h1>
+                        <p>Da nossa cozinha para a sua mesa, oferecemos uma combinação perfeita de tradição e inovação. Seja para um almoço rápido ou um jantar especial, nossa linha de massas é ideal para qualquer ocasião.</p>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+            <div class="wapperinfo">
+                <div class="linhainfo row animate">
+                    <img src="Assents/img/img1.jpeg" alt="">
+
+                    <div class="textinfo">
+                        <h1>Mais de 1.500 Pedidos</h1>
+                        <p>Com o crescimento contínuo, alcançamos mais de 1.500 pedidos, com um aumento de 84% nas vendas este mês. Nossa missão é continuar entregando pratos saborosos e saudáveis, que conquistam o paladar de nossos clientes a cada mordida.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+    
+
+
+
+
+
+
+
+        <div class="cards-container" id="Sobre-nos">
+        <div class="card-sobre" onclick="showPanel(1)">
+            <i class="fa-regular fa-envelope fa-5x"></i>
+            <div class="linhacardsobre"></div>
+            <p>Sobre nós</p>
+
+            <a href="">Clique Aqui</a>
+        </div>
+        <div class="card-sobre" onclick="showPanel(2)">
+            <i class="fa-solid fa-map-location-dot fa-5x"></i>
+            <div class="linhacardsobre"></div>
+            <p>Estabelecimentos</p>
+
+            <a href="">Clique Aqui</a></div>
+        <div class="card-sobre" onclick="showPanel(3)">
+            <i class="fa-solid fa-circle-exclamation fa-5x"></i>
+            <div class="linhacardsobre"></div>
+            <p>Reclame-Aqui</p>
+
+            <a href="">Clique Aqui</a></div>
+    </div>
+
+    <div id="infoPanel" class="panel">
+        <span class="close-btn" onclick="hidePanel()">×</span>
+        <div id="panelContent"></div>
+    </div>
+
+    
+
+
+
+
+        <footer>
+            <div class="content">
+              <div class="top">
+                <div class="logo-details">
+                  <img src="Assents/img/Group 2.png" alt="">
+                </div>
+               
+                <div class="media-icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+              </div> 
+
+              <div class="link-boxes">
+                <ul class="box">
+                  <li class="link_name">Companias</li>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Informações</a></li>
+                  <li><a href="#">Sobre nós</a></li>
+                  <li><a href="#">Cardápio</a></li>
+                </ul>
+                <ul class="box">
+                  <li class="link_name">Serviços</li>
+                  <li><a href="#">App designer</a></li>
+                  <li><a href="#">Web designer</a></li>
+                  <li><a href="#">Logo designer</a></li>
+                  <li><a href="#">Banner designer</a></li>
+                  <li><a href="#">back-end developer</a></li>
+                </ul>
+                <ul class="box">
+                  <li class="link_name">Interantes</li>
+                  <li><a href="#">Andrey Rodrigues</a></li>
+                  <li><a href="#">Ryan Augusto</a></li>
+                  <li><a href="#">Evelyn Truchlaeff</a></li>
+                  <li><a href="#">Bianca Nunes</a></li>
+                </ul>
+                <ul class="box">
+                  <li class="link_name">Desenvolvimento web</li>
+                  <li><a href="#">HTML & CSS</a></li>
+                  <li><a href="#">JavaScript</a></li>
+                  <li><a href="#">Photography</a></li>
+                  <li><a href="#">Photoshop</a></li>
+                  <li><a href="#">Back-end</a></li>
+                </ul>
+                <ul class="box input-box">
+                  <img src="Assents/img/cards.png" alt="">
+                </ul>
+              </div>
+            </div>
+            <div class="bottom-details">
+              <div class="bottom_text">
+                <span class="copyright_text">Copyright © 2024 <a href="index.html">La Dolce Pasta</a>Todos os direitos reservados</span>
+                <span class="policy_terms">
+                  <a href="#">Privacy policy</a>
+                  <a href="#">Termos & condições</a>
+                </span>
+              </div>
+            </div>
+          </footer>
+
+            </footer>
+
+        </div>
+      
+            <script src="Assents/Js/card-info.js"></script>
+            <script src="Assents/Js/main.js"></script>
+        <script src="./Assents/Js/slider.js"></script>
+        <script src="Assents/Js/navbar.js" defer></script>
+        <script src="Assents/Js/animação.js"></script> 
+        <script src="Assents/Js/Loading.js"></script>
+        <script src="Assents/Js/card-pag.js"></script>
+</body>
+ <script src="https://kit.fontawesome.com/0cf6585b12.js" 
+  crossorigin="anonymous" ></script>
+</html>
+
