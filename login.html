@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assents/Css/LoginHome.css">
+    <link rel="stylesheet" href="Assents/Css/Card_Login.css">
+    <link rel="stylesheet" href="Assents/Css/Icones-media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="Assents/Css/navbar.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <title>Cadastro</title>
+</head>
+<body>
+    <nav class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <img src="Assents/img/Group 2.png" style="visibility: hidden;margin-left: -250px; width: 150px;" alt="" class="logo crt">
+
+        <ul class="nav-links">
+            <i class="uil uil-times navCloseBtn"></i>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="Cardapio.html">Cardapio</a></li>
+            <li><a onclick="window.location.href='index.html#informação'">Informações</a></li>
+            <li><a onclick="window.location.href='index.html#Sobre-nos'">Sobre nós</a></li>
+            <li><a href="Cadastro.html">Cadastar-se</a></li>
+            <li><a href="Carrinho.html">Carrinho</a></li>
+          </ul>
+  
+        <i class="uil uil-search search-icon" id="searchIcon"></i>
+        <div class="search-box">
+          <i class="uil uil-search search-icon"></i>
+          <input type="text" placeholder="Search here..." />
+        </div>
+      </nav>
+    
+    <header class="login">
+        <video src="./Assents/img/videocadas.mp4" muted loop autoplay></video>
+       
+        <div class="linhalogin">
+        <div class="Prt-esque">
+            <a href="index.html"><img src="./Assents/img/Group 21.svg"  alt=""></a>
+            <p></p>
+        </div>
+
+        <div class="cards2">
+            <form class="card_login" id="loginForm">
+                <div class="linha-login">
+                <h1>LOGIN</h1>
+                <ul class="wrapper">
+                    <li class="icon facebook">
+                        <span class="tooltip">Facebook</span>
+                        <span onclick="loginWithFacebook()"><i class="fab fa-facebook-f"></i></span>
+                    </li>
+                    <li class="icon Google">
+                        <span class="tooltip">Google</span>
+                        <span onclick="loginWithGoogle()"><i class="fa-brands fa-google"></i></span>
+                    </li>
+                    <li class="icon email">
+                        <span class="tooltip">Email</span>
+                        <span onclick="loginWithEmail()"><i class="fa-regular fa-envelope"></i></span>
+                    </li>
+                </ul>
+        
+                <p class="cad-text">Email</p>
+                <label class="label-input">
+                    <i class="fa-regular fa-envelope icon-modify"></i>
+                    <input type="email" id="emailLogin" placeholder="Email" required>
+                </label>
+        
+                <p class="cad-text">Senha</p>
+                <label class="label-input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="senhaLogin" placeholder="Senha" required>
+                </label>
+        
+                <header class="remember">
+                    <div>
+                        <input type="checkbox" id="rememberMe"><p>Me lembrar</p>
+                    </div>
+                    <a href="">Esqueceu a Senha?</a>
+                </header>
+        
+                <button type="button" onclick="loginUser()">Entrar</button>
+                <a class="buttoncadas" href="Cadastro.html">Não tem cadastro?</a>
+            </div>
+            </form>
+        </div>
+</div>
+</div>
+</body>
+<script src="https://kit.fontawesome.com/0cf6585b12.js" 
+crossorigin="anonymous" ></script>
+<script src="Assents/Js/login.js"></script>
+<script src="Assents/Js/navbar.js"></script>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi</title>
+    <link rel="stylesheet" href="./Assents/Css/loading.css">
+    <link rel="stylesheet" href="Assents/Css/style-carrinho.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./Assents/Css/PratosMulti.css">
+    <link rel="stylesheet" href="./Assents/Css/navbar.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="shortcut icon" type="imagex/png" href="./Assents/img/logo.png">
+    <link rel="stylesheet" href="Assents/Css/Pag-car.css">
+    <script src="Assents/Js/navbar.js" defer></script>
+</head>
+<body onload="preCarregamento();">
+    <div class="pre-carregamento">
+        <video class="loadingE" src="./Assents/img/espaguete.mp4" style=" width: 10rem;"muted loop autoplay></video>
+    </div>
+
+
+
+    <nav class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <img src="Assents/img/Group 2.png" style="width: 150px;" alt="" class="logo crt">
+
+        <ul class="nav-links">
+            <i class="uil uil-times navCloseBtn"></i>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="Cardapio.html">Cardapio</a></li>
+            <li><a onclick="window.location.href='index.html#informação'">Informações</a></li>
+            <li><a onclick="window.location.href='index.html#Sobre-nos'">Sobre nós</a></li>
+            <li><a href="Cadastro.html">Cadastar-se</a></li>
+            <li><a href="Carrinho.html">Carrinho</a></li>
+          </ul>
+  
+        <i class="uil uil-search search-icon" id="searchIcon"></i>
+        <div class="search-box">
+          <i class="uil uil-search search-icon"></i>
+          <input type="text" placeholder="Search here..." />
+        </div>
+      </nav>
+
+
+    <div class="dashboard">
+        <div class="sidebar">
+            <ul>
+                <li class="active" data-section="overview"><i class="fas fa-th-large"></i>Perfil</li>
+                <li data-section="wishlist"><i class="fas fa-heart"></i>Favoritos</li>
+                <li data-section="wallet"><i class="fas fa-wallet"></i>Forma de pagamento</li>
+                <li data-section="address"><i class="fas fa-map-marker-alt"></i>Localização</li>
+                <li data-section="myAddress" id="myAddress"><i class="fa-solid fa-cart-shopping"></i> Meu Carrinho</li>
+                <li data-section="logout"><i class="fas fa-sign-out-alt"></i>Sair da conta</li>
+                
+            </ul>
+        </div>
+        <div class="main-content">
+            <!-- Overview Section -->
+            <section id="overview" class="section">
+    <h2>Perfil</h2>
+    <div class="overview-content">
+        <div class="overview-card Perfil">
+            <div class="reward-badges">
+                <img id="userProfilePic" src="Assents/img/user.png" alt="Usuário">
+                <span id="userName">Usuário</span>
+            </div>
+        </div>
+        <div class="overview-card orders" onclick="showUserInfo()">
+            <h3>Informações pessoais</h3>
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+    </div>
+</section>
+
+<!-- Modal para Informações Pessoais -->
+<div id="userInfoModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Informações Pessoais</h2>
+        <p><strong>Nome:</strong> <span id="modalUserName"></span></p>
+        <p><strong>Email:</strong> <span id="modalUserEmail"></span></p>
+        <p><strong>CPF:</strong> <span id="modalUserCpf"></span></p>
+    </div>
+</div>
+            <!-- Wishlist Section -->
+            <section id="wishlist" class="section" style="display: none;">
+                <h2>Favoritos</h2>
+                <div class="wishlist-content">
+                    <!-- Card 1 -->
+                     <div class="card">
+                        <div class="container">
+                            <div class="card-li">
+                                <div class="img-container">
+                                    <img src="./Assents/img/teste.jpg" alt="image" />
+                                </div>
+                                <div class="actions">
+                                    <i class="delete-icon favorite">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                            <path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <h3>Urban Vibes Tee</h3>
+                                <p>The Urban Vibes Tee captures the essence of modern city life with its sleek design and bold graphics.</p>
+                                <div class="linha-qty"><div class="qty-container">
+                                    <button type="button" class="qty-count-minus">-</button>
+                                    <input type="number" class="qty-count" min="0" max="10" value="1">
+                                    <button type="button" class="qty-count-plus">+</button>
+                                </div></div>
+                                
+                                <div class="flip-container">
+                                    <div class="flip-box">
+                                        <div class="flip-box-front">
+                                           
+                                            <ins>
+                                                <span class="price">$19.00</span>
+                                            </ins>
+                                        </div>
+                                        <div class="flip-box-back"> <button><i class="fa-solid fa-cart-shopping"></i><p>Adicionar ao carrinho</p></button> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    <!-- Card 2 -->
+                    <div class="card">
+                        <div class="container">
+                            <div class="card-li">
+                                <div class="img-container">
+                                    <img src="./Assents/img/teste.jpg" alt="image" />
+                                </div>
+                                <div class="actions">
+                                    <i class="delete-icon favorite">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                            <path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <h3>Urban Vibes Tee</h3>
+                                <p>The Urban Vibes Tee captures the essence of modern city life with its sleek design and bold graphics.</p>
+                                <div class="linha-qty"><div class="qty-container">
+                                    <button type="button" class="qty-count-minus">-</button>
+                                    <input type="number" class="qty-count" min="0" max="10" value="1">
+                                    <button type="button" class="qty-count-plus">+</button>
+                                </div></div>
+                                
+                                <div class="flip-container">
+                                    <div class="flip-box">
+                                        <div class="flip-box-front">
+                                           
+                                            <ins>
+                                                <span class="price">$19.00</span>
+                                            </ins>
+                                        </div>
+                                        <div class="flip-box-back"> <button><i class="fa-solid fa-cart-shopping"></i><p>Adicionar ao carrinho</p></button> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    <!-- Card 3 -->
+                    <div class="card">
+                        <div class="container">
+                            <div class="card-li">
+                                <div class="img-container">
+                                    <img src="./Assents/img/teste.jpg" alt="image" />
+                                </div>
+                                <div class="actions">
+                                    <i class="delete-icon favorite">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                            <path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <h3>Urban Vibes Tee</h3>
+                                <p>The Urban Vibes Tee captures the essence of modern city life with its sleek design and bold graphics.</p>
+                                <div class="linha-qty"><div class="qty-container">
+                                    <button type="button" class="qty-count-minus">-</button>
+                                    <input type="number" class="qty-count" min="0" max="10" value="1">
+                                    <button type="button" class="qty-count-plus">+</button>
+                                </div></div>
+                                
+                                <div class="flip-container">
+                                    <div class="flip-box">
+                                        <div class="flip-box-front">
+                                           
+                                            <ins>
+                                                <span class="price">$19.00</span>
+                                            </ins>
+                                        </div>
+                                        <div class="flip-box-back"> <button><i class="fa-solid fa-cart-shopping"></i><p>Adicionar ao carrinho</p></button> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+<!-- Card 4 -->
+                      <div class="card">
+                        <div class="container">
+                            <div class="card-li">
+                                <div class="img-container">
+                                    <img src="./Assents/img/teste.jpg" alt="image" />
+                                </div>
+                                <div class="actions">
+                                    <i class="delete-icon favorite">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                            <path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <h3>Urban Vibes Tee</h3>
+                                <p>The Urban Vibes Tee captures the essence of modern city life with its sleek design and bold graphics.</p>
+                                <div class="linha-qty"><div class="qty-container">
+                                    <button type="button" class="qty-count-minus">-</button>
+                                    <input type="number" class="qty-count" min="0" max="10" value="1">
+                                    <button type="button" class="qty-count-plus">+</button>
+                                </div></div>
+                                
+                                <div class="flip-container">
+                                    <div class="flip-box">
+                                        <div class="flip-box-front">
+                                           
+                                            <ins>
+                                                <span class="price">$19.00</span>
+                                            </ins>
+                                        </div>
+                                        <div class="flip-box-back"> <button><i class="fa-solid fa-cart-shopping"></i><p>Adicionar ao carrinho</p></button> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </section>
+            <!-- My Address Section -->
+            <section id="address" class="section" style="display: none;">
+                <h2>Localização</h2>
+                <div class="address-content">
+                            <button class="add-address-button">Nova localização</button>
+                            
+                            <!-- Formulário para adicionar nova localização -->
+                            <form id="address-form" style="display: none;">
+                                <input type="text" id="location-name" placeholder="Nome da localização (ex: Casa, Trabalho)">
+                                <input type="text" id="cep" placeholder="CEP">
+                                <input type="text" id="street" placeholder="Rua" readonly>
+                                <input type="text" id="neighborhood" placeholder="Bairro" readonly>
+                                <input type="text" id="numberHome" placeholder="Nº">
+                                <input type="text" id="city" placeholder="Cidade" readonly>
+                                <input type="text" id="state" placeholder="Estado" readonly>
+                                
+                                <button type="submit">Salvar localização</button>
+                            </form>
+                            
+                    
+                            <!-- Contêiner para os cartões de endereço -->
+                            <div id="address-list">
+                                <!-- Cards de endereços são adicionados aqui dinamicamente -->
+                            </div>
+                        </div>
+                    </section>
+
+
+
+
+                    <div id="wallet" class="section" style="display: none;">
+                        <h2>Forma de Pagamento</h2>
+                        <div class="wallet-content">
+                            <div class="card-pag" id="balance">
+                                <h3>Pix</h3>
+                            
+                            </div>
+                            <div class="card-pag" id="saved-cards">
+                                <h3>Cartões Cadastrado</h3>
+                                <p>Clique aqui para ver</p>
+                            </div>
+                        </div>
+                        <div class="wallet-content">
+                            <div class="card-pag">
+                                <h3>Adicionar cartão</h3>
+                                <form id="add-balance-form">
+                                    <label for="holder-name">Nome do Titular</label>
+                                    <input type="text" id="holder-name" required>
+                                    <label for="card-number">Número do cartão</label>
+                                    <input type="text" id="card-number" required>
+                                    <div class="form-row">
+                                        <div>
+                                            <label for="expiration-month">Mês de expiração</label>
+                                            <select id="expiration-month" required>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <!-- Add other months -->
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="expiration-year">Ano de expiração</label>
+                                            <select id="expiration-year" required>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                                <!-- Add other years -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" required>
+                                    <button type="submit">Add Balance</button>
+                                </form>
+                                
+                            </div>
+
+                            <div class="history-section">
+                                <h3>History</h3>
+                                <ul class="history-item">
+                                    <li class="history-linha">
+                                        <div class="linha-hist">
+                                        <p>Macarrão</p>
+                                        <p>Transição ID: LPD1425596</p>
+                                        <p>Transição ID: LPD1425596</p>
+                                        <p>6 outubro 2024, 12:56 PM</p></div>
+                                        <div class="linha-view">
+                                        <p>R$25,00</p>
+                                        <a href="#" class="view-link">Ver mais</a></div>
+                                    </li>
+                                    <li class="history-linha">
+                                        <div class="linha-hist">
+                                        <p>Macarrão</p>
+                                        <p>Transição ID: LPD1425596</p>
+                                        <p>Transição ID: LPD1425596</p>
+                                        <p>6 outubro 2024, 12:56 PM</p></div>
+                                        <div class="linha-view">
+                                        <p>R$25,00</p>
+                                        <a href="#" class="view-link">Ver mais</a></div>
+                                    </li>
+                                    <li class="history-linha">
+                                        <div class="linha-hist">
+                                        <p>Macarrão</p>
+                                        <p>Transição ID: LPD1425596</p>
+                                        <p>Transição ID: LPD1425596</p>
+                                        <p>6 outubro 2024, 12:56 PM</p></div>
+                                        <div class="linha-view">
+                                        <p>R$25,00</p>
+                                        <a href="#" class="view-link">Ver mais</a></div>
+                                    </li>
+                                    <li class="history-linha">
+                                        <div class="linha-hist">
+                                        <p>Macarrão</p>
+                                        <p>Transição ID: LPD1425596</p>
+                                        <p>Transição ID: LPD1425596</p>
+                                        <p>6 outubro 2024, 12:56 PM</p></div>
+                                        <div class="linha-view">
+                                        <p>R$25,00</p>
+                                        <a href="#" class="view-link">Ver mais</a></div>
+                                    </li>
+                                    <!-- More history items -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div id="myAddress" class="section" style="display: none;">
+                        <div id="Carrinho-p">
+                            <h2>Meu Carrinho</h2>
+                            <div class="Carrinho-p-list"></div>
+                        </div>
+                        <div id="cart-summary" style="display: none;">
+                            <p><span id="carttotal">00.00</span></p>
+                            <button id="checkout-button">Comprar</button>
+                        </div>
+                    </div>
+                    
+                    
+
+
+
+
+
+                    <div id="saved-cards-panel" style="display: none;">
+                        <h2>Cartões salvos</h2>
+                        <ul id="saved-cards-list"></ul>
+                        <button id="close-panel">Sair</button>
+                    </div>
+                    
+        </div>
+    </div>
+    <script src="Assents/Js/script-multi.js"></script>
+    <script src="https://kit.fontawesome.com/0cf6585b12.js" 
+  crossorigin="anonymous" ></script>
+  <script src="Assents/Js/navbar.js"></script>
+  <script src="Assents/Js/card-pag.js"></script>
+  <script src="Assents/Js/carrinho.js"></script>
+  <script src="Assents/Js/Loading.js"></script>
+</body>
+</html>
