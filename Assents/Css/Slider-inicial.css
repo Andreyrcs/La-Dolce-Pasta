@@ -1,0 +1,307 @@
+@keyframes cardFadeIn {
+  50% {
+      transform: translateY(80px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.testimonials {
+    text-align: center;
+    color: var(--primary);
+    
+}
+
+.testimonials .slider {
+    max-width: 100%;
+    overflow-x: hidden;
+    
+}
+
+.testimonials .slider input {
+    display: none;
+}
+
+.testimonials .slider-area {
+    width: 200%;
+    display: flex;
+    transition: all ease .5s;
+}
+
+.testimonials .slider-item {
+    width: 100%;
+}
+
+.testimonials .slider-item img {
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+    filter: brightness(30%);
+    object-fit: cover
+    
+}
+
+.testimonials .slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.testimonials .slider-nav label {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0.2rem solid var(--primary-light);
+    transition: all ease .5s;
+}
+
+#slider-1:checked~.slider-area {
+    margin-left: 0%;
+}
+
+#slider-2:checked~.slider-area {
+    margin-left: -100%;
+}
+
+#slider-1:checked~.slider-nav .n1 {
+    background-color: var(--foreground);
+}
+
+#slider-2:checked~.slider-nav .n2 {
+    background-color: var(--foreground);
+}
+
+
+div.whapperinicio{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: cardFadeIn 6s ease forwards;
+}
+div.whapperinicio div.imginicio img{
+   width: 80vh;
+   margin-left: -300px;
+   margin-top: 90px;
+}
+div.whapperinicio div.textincio{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: aliceblue;
+}
+
+div.whapperinicio div.textincio h1{
+    -webkit-text-stroke-width: 0.7px; /* largura da borda */
+    -webkit-text-stroke-color: #000000; /* cor da borda */
+}
+div.whapperinicio div.textincio h1.red{
+    color: #bd2424;
+    -webkit-text-stroke-width: 0.7px; /* largura da borda */
+    -webkit-text-stroke-color: #ffffff; /* cor da borda */
+}
+
+div.buttonwhapper{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    margin-top: 50rem;
+    display: flex;
+    justify-content: center;
+}
+div.buttonwhapper button{
+    width: 40vh;
+    height: 10vh;
+}
+
+button {
+    font-family: inherit;
+   
+  }
+  
+  
+  
+  .btn-1,
+  .btn-1 *,
+  .btn-1 :after,
+  .btn-1 :before,
+  .btn-1:after,
+  .btn-1:before {
+    border: 0 solid;
+    box-sizing: border-box;
+  }
+  
+  .btn-1 {
+    scale: 0.5;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-color:#3d6d40;
+    background-image: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+      Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#3d6d40, #fff);
+    padding: 0;
+  }
+  
+  .btn-1:disabled {
+    cursor: default;
+  }
+  
+  .btn-1:-moz-focusring {
+    outline: auto;
+  }
+  
+  .btn-1 svg {
+    display: block;
+    vertical-align: middle;
+  }
+  
+  .btn-1 [hidden] {
+    display: none;
+  }
+  
+  .btn-1 {
+    border: 1px solid;
+    border-radius: 999px;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 900;
+    overflow: hidden;
+    padding: 1.2rem 3rem;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  
+  .btn-1 .original {
+    background: #fff;
+    color:#3d6d40;
+    display: grid;
+    inset: 0;
+    place-content: center;
+    position: absolute;
+    transition: transform 0.3s cubic-bezier(0.87, 0, 0.13, 1);
+  }
+  
+  .btn-1:hover .original {
+    transform: translateY(100%);
+  }
+  
+  .btn-1 .letters {
+    display: inline-flex;
+    font-size: 20px;
+  }
+  
+  .btn-1 span {
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: transform 0.3s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.3s;
+  }
+  
+  .btn-1 span:nth-child(2n) {
+    transform: translateY(15px);
+  }
+  
+  .btn-1:hover span {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .btn-1:hover span:nth-child(2) {
+    transition-delay: 0.01s;
+  }
+  
+  .btn-1:hover span:nth-child(3) {
+    transition-delay: 0.02s;
+  }
+  
+  .btn-1:hover span:nth-child(4) {
+    transition-delay: 0.03s;
+  }
+  
+  .btn-1:hover span:nth-child(5) {
+    transition-delay: 0.04s;
+  }
+  
+  .btn-1:hover span:nth-child(6) {
+    transition-delay: 0.05s;
+  }
+  .btn-1:hover span:nth-child(7) {
+    transition-delay: 0.06s;
+  }
+  .btn-1:hover span:nth-child(8) {
+    transition-delay: 0.07s;
+  }
+  .btn-1:hover span:nth-child(9) {
+    transition-delay: 0.08s;
+  }
+  .btn-1:hover span:nth-child(10) {
+    transition-delay: 0.09s;
+  }
+  .btn-1:hover span:nth-child(11) {
+    transition-delay: 0.10s;
+  }
+  .btn-1:hover span:nth-child(12) {
+    transition-delay: 0.11s;
+  }
+  .btn-1:hover span:nth-child(13) {
+    transition-delay: 0.12s;
+  }
+  .btn-1:hover span:nth-child(14) {
+    transition-delay: 0.13s;
+  }
+
+  @media(max-width: 1600px) {
+    div.whapperinicio div.imginicio img{
+        margin-left: -100px;
+    }
+
+  }
+  @media(max-width: 1230px) {
+    div.whapperinicio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    div.whapperinicio div.textincio{
+        margin-top: -20rem;
+    }
+    div.buttonwhapper{
+        margin-top: 50rem;
+        display: flex;
+        justify-content: center;
+    }
+
+
+  }
+  @media(max-width: 700px) {
+    div.whapperinicio div.imginicio img{
+        width: 50vh;
+        margin-top: 0;
+    }
+    div.whapperinicio div.textincio{
+        margin-top: -10rem;
+    }
+
+  }

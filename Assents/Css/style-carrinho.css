@@ -1,0 +1,395 @@
+/* Reset CSS */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Irish+Grover&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#fff;
+    overflow: hidden;
+    perspective: 1000px;
+    
+}
+
+.dashboard {
+    display: flex;
+    width: 80%;
+    height: 80%;
+    border-radius: 15px;
+    overflow: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-color:rgb(252, 246, 239);
+    transform: scale(1);
+    transition: transform 0.4s ease-in-out;
+    animation: fadeIn 1.2s ease;
+    margin-top: 5rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.sidebar {
+    width: 250px;
+    background-color:rgb(252, 246, 239);
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+    width: 100%;
+}
+
+.sidebar li {
+    padding: 15px;
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    position: relative;
+}
+
+.sidebar li:hover,
+.sidebar .active {
+    background-color: #3D6D40;
+    color: white;
+    transform: translateX(8px);
+}
+
+.sidebar li i {
+    margin-right: 10px;
+    transition: transform 0.2s ease;
+}
+
+.sidebar li:hover i {
+    transform: rotate(10deg);
+}
+
+.sidebar .active:before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #3D6D40;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px  #68b96e;
+    }
+    to {
+        box-shadow: 0 0 15px  #3D6D40, 0 0 30px rgba(86, 255, 34, 0.5);
+    }
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background: linear-gradient(135deg, #fcf6ef, #f7f7f7);
+    overflow-y: auto;
+}
+
+h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    color:#7a3030;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: "Irish Grover", system-ui;
+    margin-top: 10px;
+}
+
+.overview-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.overview-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: cardFadeIn 1s ease forwards;
+    opacity: 0;
+}
+.Perfil{
+    height: 20rem;
+}
+.reward-badges{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.reward-badges img{
+    width: 20%;
+
+}
+
+
+
+.orders{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.wallet{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes cardFadeIn {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.overview-card:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1.05);
+    }
+    to {
+        transform: scale(1.07);
+    }
+}
+
+.wishlist-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center;
+}
+
+.wishlist-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: cardFadeIn 1s ease forwards;
+    opacity: ease 0.3s;
+   
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff5722;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.product-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-info {
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.current-price {
+    color:#7a3030;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.delete-icon {
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+
+    top: 10px;
+    right: 10px;
+    transition: color 0.3s;
+}
+
+.delete-icon:hover {
+    color: #ff5722;
+}
+
+/* Estilos da Address Section */
+.address-content {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: cardFadeIn 1s ease forwards;
+}
+
+.add-address-button {
+    background-color:#7a3030;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: background 0.3s;
+}
+
+.add-address-button:hover {
+    background-color:#7a3030;
+}
+
+.address-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: cardFadeIn 1s ease forwards;
+}
+
+.address-info {
+    display: flex;
+    align-items: center;
+}
+
+.address-info i {
+    font-size: 24px;
+    color: #ff5722;
+    margin-right: 15px;
+}
+
+.address-info h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.address-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+.address-actions i {
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.address-actions i:hover {
+    color: #ff5722;
+}
+@media(max-width: 860px) {
+    .dashboard{
+        width: 95%;
+        
+    }
+}
+
+
+/* Estilos para o formulário de endereço */
+#address-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#address-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#address-form button {
+    background-color: #7a3030;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+#address-form button:hover {
+    background-color: #5a2020;
+}
+.address-actions{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.address-actions i{
+    display: contents;
+}
+

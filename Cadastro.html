@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assents/Css/CadastroHome.css">
+    <link rel="stylesheet" href="Assents/Css/Card_Cadastro.css">
+    <link rel="stylesheet" href="Assents/Css/navbar.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+   <script src="Assents/Js/navbar.js" defer></script>
+   <link rel="stylesheet" href="Assents/Css/Icones-media.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+       crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <link rel="shortcut icon" type="imagex/png" href="./Assents/img/logo.png">
+    <title>Cadastro</title>
+</head>
+<body>
+    <nav class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <img src="Assents/img/Group 2.png" style="width: 150px;" alt="" class="logo crt">
+
+        <ul class="nav-links">
+            <i class="uil uil-times navCloseBtn"></i>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="Cardapio.html">Cardapio</a></li>
+            <li><a onclick="window.location.href='index.html#informação'">Informações</a></li>
+            <li><a onclick="window.location.href='index.html#Sobre-nos'">Sobre nós</a></li>
+            <li><a href="Cadastro.html">Cadastar-se</a></li>
+            <li><a href="Carrinho.html">Carrinho</a></li>
+          </ul>
+  
+        <i class="uil uil-search search-icon" id="searchIcon"></i>
+        <div class="search-box">
+          <i class="uil uil-search search-icon"></i>
+          <input type="text" placeholder="Pesquise aqui..." />
+        </div>
+    </nav>
+
+
+
+
+
+
+
+      <header class="login">
+        <video src="./Assents/img/videocadas.mp4" muted loop autoplay></video>
+    
+        <div class="Prt-esque">
+            <a href="index.html"><img src="./Assents/img/logocardapio.png" alt=""></a>
+        </div>
+    
+        <form class="card_login" id="cadastroClien">
+            <h1>Cadastro</h1>
+    
+            <ul class="wrapper">
+                <li class="icon facebook">
+                    <span class="tooltip">Facebook</span>
+                    <span onclick="loginWithFacebook()"><i class="fab fa-facebook-f"></i></span>
+                </li>
+                <li class="icon Google">
+                    <span class="tooltip">Google</span>
+                    <span onclick="loginWithGoogle()"><i class="fa-brands fa-google"></i></span>
+                </li>
+
+                <li class="icon email">
+                    <span class="tooltip">Email</span>
+                    <span onclick="loginWithEmail()"><i class="fa-regular fa-envelope"></i></span>
+                </li>
+            </ul>
+    
+            
+            <div class="--input">
+                <div class="p-">
+                    <p class="cad-text">Email</p>
+                <label class="label-input">
+                    <i class="fa-regular fa-envelope icon-modify"></i>
+                    <input type="email" id="email" placeholder="Email" required>
+                </label>
+                </div>
+
+                <div class="p-">
+                    <p class="cad-text">Confirmar Email</p>
+                <label class="label-input">
+                    <i class="fa-regular fa-envelope icon-modify"></i>
+                    <input type="email" id="confirmEmail" placeholder="Confirmar Email" required>
+                </label>
+                </div>
+            </div>
+    
+            <div class="--input">
+                <div class="p-">
+                    <p class="cad-text">Senha</p>
+                <label class="label-input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="senha" placeholder="Senha" required>
+                </label>
+                </div>
+
+                <div class="p-">
+                    <p class="cad-text">Confirmar Senha</p>
+                <label class="label-input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="confirmSenha" placeholder="Confirmar Senha" required>
+                </label>
+                </div>
+            </div>
+    
+            <div class="--linha"></div>
+
+            <div class="--input">
+                <div class="p-">
+                    <p class="cad-text">Nome</p>
+                    <label class="label-input-trio">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="nome" placeholder="Nome" required>
+                    </label>
+                </div>
+                
+                <div class="p-">
+                    <p class="cad-text">Sobrenome</p>
+                <label class="label-input-trio">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="sobrenome" placeholder="Sobrenome" required>
+                </label>
+                </div>
+                <div class="p-">
+                    <p class="cad-text">CPF</p>
+                <label class="label-input-trio">
+                    <i class="fa-solid fa-id-card"></i>
+                    <input type="text" id="cpf" placeholder="CPF" required>
+                </label>
+                </div>
+            </div>
+    
+            <button type="submit" onclick="registerUser()">Cadastrar</button>
+            <a class="buttoncadas" href="login.html">Já tem conta?</a>
+        </form>
+    </header>
+
+</body>
+<script src="Assents/Js/navbar.js"></script>
+<script src="https://kit.fontawesome.com/0cf6585b12.js" 
+crossorigin="anonymous" ></script>
+<script src="Assents/Js/Cadastro.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+</html>
