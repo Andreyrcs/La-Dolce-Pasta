@@ -72,12 +72,10 @@ header.txt-titu h1{
     width: 100%;
     margin: auto;
     max-width: 1200px;
-    padding: 0 20px;
+   
     display: flex;
     align-items: center;
-    padding-top: 45px;
-    padding-bottom: 45px;
-    gap: 50px;
+   
 }
 
 /* HEADER */
@@ -252,8 +250,9 @@ header .menu-icon div{
 /* PRODUCTS */
 .products-grid{
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
     gap: 20px;
     margin: 40px 0;
 }
@@ -424,8 +423,6 @@ footer .copyrights a:hover{
 
     .products-grid{
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         margin: 40px 0;
     }
