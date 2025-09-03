@@ -302,7 +302,7 @@ button {
   }
   @media(max-width: 700px) {
     div.whapperinicio div.imginicio img{
-        width: 50vh;
+        width: 40vh;
         margin-top: 0;
     }
     div.whapperinicio div.textincio{
